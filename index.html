@@ -1,163 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Corrosion Defender</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Corrosion Learning Module</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+        header {
+            background-color: #2c3e50;
+            color: #fff;
+            text-align: center;
+            padding: 20px 10px;
+        }
+        nav {
+            background-color: #34495e;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        nav a {
+            color: white;
+            padding: 12px 20px;
+            text-decoration: none;
+            display: block;
+        }
+        nav a:hover {
+            background-color: #1abc9c;
+        }
+        section {
+            padding: 20px;
+            max-width: 1000px;
+            margin: auto;
+        }
+        h2 {
+            color: #2c3e50;
+            border-bottom: 2px solid #1abc9c;
+            padding-bottom: 5px;
+        }
+        .collapsible {
+            background-color: #1abc9c;
+            color: white;
+            cursor: pointer;
+            padding: 10px;
+            width: 100%;
+            border: none;
+            text-align: left;
+            outline: none;
+            font-size: 16px;
+            margin-bottom: 5px;
+        }
+        .active, .
 
-<style> 
-    body {
-        font-family: Arial, sans-serif;
-        background: #f4f7fb;
-        margin: 0;
-        padding: 0;
-    }
-
-    header {
-        background: #0b3d91;
-        color: white;
-        padding: 20px;
-        text-align: center;
-    }
-
-    section {
-        padding: 20px;
-        max-width: 900px;
-        margin: auto;
-    }
-
-    .question-box {
-        background: white;
-        padding: 20px;
-        margin-bottom: 20px;
-        border-radius: 8px;
-        box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    }
-
-    button {
-        background: #0b3d91;
-        color: white;
-        border: none;
-        padding: 10px 15px;
-        margin: 5px 0;
-        border-radius: 5px;
-        cursor: pointer;
-        width: 100%;
-    }
-
-    button:hover {
-        background: #062c6e;
-    }
-
-    footer {
-        text-align: center;
-        background: #222;
-        color: white;
-        padding: 15px;
-        margin-top: 40px;
-    }
-
-    .result {
-        font-size: 18px;
-        font-weight: bold;
-        color: green;
-    }
-</style>
-</head>
-
-<body>
-
-<header>
-    <h1>🛡️ Corrosion Defender</h1>
-    <p>Learn corrosion types, prevention & protection methods interactively</p>
-</header>
-
-<section>
-
-<div class="question-box">
-    <h2>Q1. Identify the corrosion type</h2>
-    <p>Iron rusts uniformly when exposed to moist air.</p>
-    <button onclick="checkAnswer(this, true)">Uniform Corrosion</button>
-    <button onclick="checkAnswer(this, false)">Pitting Corrosion</button>
-    <button onclick="checkAnswer(this, false)">Crevice Corrosion</button>
-    <p class="explanation" hidden>Uniform corrosion occurs evenly over the entire surface.</p>
-</div>
-
-<div class="question-box">
-    <h2>Q2. Is this wet or dry corrosion?</h2>
-    <p>Rusting of iron in the presence of water and oxygen.</p>
-    <button onclick="checkAnswer(this, true)">Wet Corrosion</button>
-    <button onclick="checkAnswer(this, false)">Dry Corrosion</button>
-    <p class="explanation" hidden>Wet corrosion involves an electrolyte such as water.</p>
-</div>
-
-<div class="question-box">
-    <h2>Q3. Identify the corrosion type</h2>
-    <p>Stainless steel develops small deep holes.</p>
-    <button onclick="checkAnswer(this, false)">Uniform Corrosion</button>
-    <button onclick="checkAnswer(this, true)">Pitting Corrosion</button>
-    <button onclick="checkAnswer(this, false)">Galvanic Corrosion</button>
-    <p class="explanation" hidden>Pitting corrosion is localized and dangerous.</p>
-</div>
-
-<div class="question-box">
-    <h2>Q4. Best preventive measure for galvanic corrosion?</h2>
-    <p>Two dissimilar metals are connected in seawater.</p>
-    <button onclick="checkAnswer(this, true)">Sacrificial Anode</button>
-    <button onclick="checkAnswer(this, false)">Increase noble metal area</button>
-    <button onclick="checkAnswer(this, false)">Increase temperature</button>
-    <p class="explanation" hidden>Using a sacrificial anode protects the base metal.</p>
-</div>
-
-<div class="question-box">
-    <h2>Q5. Which protection method is used for underground pipelines?</h2>
-    <button onclick="checkAnswer(this, false)">Painting only</button>
-    <button onclick="checkAnswer(this, true)">Cathodic Protection</button>
-    <button onclick="checkAnswer(this, false)">Heat treatment</button>
-    <p class="explanation" hidden>Cathodic protection is widely used for buried pipelines.</p>
-</div>
-
-<div class="question-box">
-    <h2>Q6. Corrosion under bolts and gaskets is called?</h2>
-    <button onclick="checkAnswer(this, false)">Uniform Corrosion</button>
-    <button onclick="checkAnswer(this, true)">Crevice Corrosion</button>
-    <button onclick="checkAnswer(this, false)">Stress Corrosion</button>
-    <p class="explanation" hidden>Crevice corrosion occurs due to differential aeration.</p>
-</div>
-
-<div class="question-box">
-    <h2>Q7. Which is a dry corrosion example?</h2>
-    <button onclick="checkAnswer(this, true)">Oxidation of metal at high temperature</button>
-    <button onclick="checkAnswer(this, false)">Rusting in rain</button>
-    <button onclick="checkAnswer(this, false)">Seawater corrosion</button>
-    <p class="explanation" hidden>Dry corrosion occurs without moisture.</p>
-</div>
-
-<p class="result" id="scoreBox">Score: 0</p>
-
-</section>
-
-<footer>
-    © 2025 Corrosion Defender Project | Educational Use Only
-</footer>
-
-<script>
-let score = 0;
-
-function checkAnswer(button, isCorrect) {
-    let explanation = button.parentElement.querySelector(".explanation");
-
-    if (isCorrect) {
-        score += 5;
-        button.style.background = "green";
-    } else {
-        button.style.background = "red";
-    }
-
-    explanation.hidden = false;
-    document.getElementById("scoreBox").innerText = "Score: " + score;
-}
-</script>
-
-</body>
-</html>
