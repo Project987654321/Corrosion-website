@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en"> 
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -55,5 +55,207 @@
             font-size: 16px;
             margin-bottom: 5px;
         }
-        .active, .
+        .active, .collapsible:hover {
+            background-color: #16a085;
+        }
+        .content {
+            padding: 0 15px;
+            display: none;
+            overflow: hidden;
+            background-color: #ecf0f1;
+            margin-bottom: 10px;
+        }
+        .quiz, .case-study {
+            background-color: #ecf0f1;
+            padding: 15px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+        }
+        footer {
+            background-color: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        img.mindmap {
+            max-width: 100%;
+            display: block;
+            margin: 10px auto;
+            border: 2px solid #2c3e50;
+            border-radius: 8px;
+        }
+        button {
+            margin-top: 10px;
+            padding: 8px 12px;
+            background-color: #2c3e50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #1abc9c;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Corrosion Learning Module</h1>
+</header>
+
+<nav>
+    <a href="#theory">Theory</a>
+    <a href="#mindmaps">Mind Maps</a>
+    <a href="#quiz">Quiz</a>
+    <a href="#case-studies">Case Studies</a>
+</nav>
+
+<section id="theory">
+    <h2>Theory of Corrosion</h2>
+
+    <button class="collapsible">Definition & Causes</button>
+    <div class="content">
+        <p>Corrosion is the destruction of metal through unwanted or unintentional chemical or electrochemical reaction which occurs between the surface of the metal and the environment.</p>
+        <ul>
+            <li>Causes: ores, extraction process, natural tendency of metal</li>
+            <li>Consequences: equipment failure, safety hazards, maintenance cost</li>
+        </ul>
+    </div>
+
+    <button class="collapsible">Types of Corrosion</button>
+    <div class="content">
+        <h3>Dry/Atmospheric Corrosion:</h3>
+        <p>Reaction of metals with atmospheric gases (O₂, H₂S, SO₂, etc.) forming protective or non-protective films.</p>
+        <h3>Wet/Electrochemical Corrosion:</h3>
+        <p>Occurs in presence of electrolyte. Includes galvanic, concentration cell, hydrogen evolution, oxygen absorption mechanisms.</p>
+    </div>
+
+    <button class="collapsible">Mechanism of Wet Corrosion</button>
+    <div class="content">
+        <p>Anodic Reaction: M → Mⁿ⁺ + n e⁻</p>
+        <p>Cathodic Reaction: H⁺ + e⁻ → H₂ (absence of oxygen) / 4H⁺ + O₂ + 4e⁻ → 2H₂O (presence of oxygen)</p>
+    </div>
+
+    <button class="collapsible">Prevention & Protection</button>
+    <div class="content">
+        <ul>
+            <li>Protective coatings (metallic & non-metallic)</li>
+            <li>Cathodic protection</li>
+            <li>Material selection (resistant alloys)</li>
+            <li>Environmental control (humidity, pollutants)</li>
+        </ul>
+    </div>
+</section>
+
+<section id="mindmaps">
+    <h2>Mind Maps</h2>
+</section>
+
+<section id="quiz">
+    <h2>Quiz</h2>
+    <div class="quiz">
+        <h3>MCQs:</h3>
+        <ol>
+            <li>Which of the following is an example of dry corrosion?
+                <br><input type="radio" name="q1"> Rusting of iron
+                <br><input type="radio" name="q1"> Oxidation of magnesium in air
+                <br><input type="radio" name="q1"> Galvanic corrosion
+                <br><input type="radio" name="q1"> Concentration cell corrosion
+            </li>
+            <li>Hydrogen embrittlement mainly affects:
+                <br><input type="radio" name="q2"> Aluminum
+                <br><input type="radio" name="q2"> Steel
+                <br><input type="radio" name="q2"> Copper
+                <br><input type="radio" name="q2"> Zinc
+            </li>
+        </ol>
+        <h3>Reason-based Questions:</h3>
+        <ol>
+            <li>Why does aluminum form a protective oxide layer that prevents further corrosion?</li>
+            <li>Explain why galvanic corrosion occurs when dissimilar metals are connected in an electrolyte.</li>
+        </ol>
+    </div>
+</section>
+
+<section id="case-studies">
+    <h2>Case Studies</h2>
+
+    <div class="case-study">
+        <h3>Case Study 1: Rusting of Steel Fencing Wire at Joints</h3>
+        <ol>
+            <li>Type of corrosion: Wet (Galvanic)</li>
+            <li>Causes: Connection of steel with moisture exposure</li>
+            <li>Preventive measures: Zinc coating, avoid metal contact</li>
+            <li>Protection method: Sacrificial anode</li>
+            <li>Wet or Dry: Wet</li>
+        </ol>
+    </div>
+
+    <div class="case-study">
+        <h3>Case Study 2: Copper Sheets Joined with Iron Nails</h3>
+        <ol>
+            <li>Type of corrosion: Galvanic</li>
+            <li>Causes: Dissimilar metals in electrolyte</li>
+            <li>Preventive measures: Use same metals, coating</li>
+            <li>Protection method: Cathodic protection</li>
+            <li>Wet or Dry: Wet</li>
+        </ol>
+    </div>
+
+    <div class="case-study">
+        <h3>Case Study 3: Concentration Cell Corrosion in Pipelines</h3>
+        <ol>
+            <li>Type of corrosion: Wet (Concentration Cell)</li>
+            <li>Causes: Uneven oxygen concentration along pipe</li>
+            <li>Preventive measures: Ensure uniform aeration, coating</li>
+            <li>Protection method: Sacrificial anode</li>
+            <li>Wet or Dry: Wet</li>
+        </ol>
+    </div>
+
+    <div class="case-study">
+        <h3>Case Study 4: Hydrogen Embrittlement in High-Temperature Steel</h3>
+        <ol>
+            <li>Type of corrosion: Hydrogen attack</li>
+            <li>Causes: Atomic hydrogen penetration at high temperature</li>
+            <li>Preventive measures: Proper alloy selection, heat treatment</li>
+            <li>Protection method: Barrier coatings</li>
+            <li>Wet or Dry: Wet</li>
+        </ol>
+    </div>
+
+    <div class="case-study">
+        <h3>Case Study 5: Liquid Metal Attack in Nuclear Devices</h3>
+        <ol>
+            <li>Type of corrosion: Liquid metal corrosion</li>
+            <li>Causes: Chemical action of flowing liquid metal at high temperature</li>
+            <li>Preventive measures: Use corrosion-resistant metals</li>
+            <li>Protection method: Protective coatings</li>
+            <li>Wet or Dry: Wet</li>
+        </ol>
+    </div>
+</section>
+
+<footer>
+    Made by SAMRUDHI SANJAY SHINDE
+</footer>
+
+<script>
+    const collapsibles = document.querySelectorAll(".collapsible");
+    collapsibles.forEach((btn) => {
+        btn.addEventListener("click", function () {
+            this.classList.toggle("active");
+            const content = this.nextElementSibling;
+            content.style.display = content.style.display === "block" ? "none" : "block";
+        });
+    });
+</script>
+
+</body>
+</html>
+
 
